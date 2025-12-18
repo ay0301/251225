@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react";
-import Bar from "../components/Bar";
+import Header from "../components/Header";
 import Webcam from "react-webcam";
 import styles from "./Pages.module.css";
 import cameraIcon from "../assets/camera.png";
@@ -17,8 +17,7 @@ function Photo() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.mainText}>🎂 Happy 2nd Anniversary 🎉</div>
-      <Bar />
+      <Header />
       <div className={styles.photoContainer}>
         <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" mirrored={true} />
         <button

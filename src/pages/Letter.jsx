@@ -1,13 +1,10 @@
 import styles from "./Pages.module.css";
-import Bar from "../components/Bar";
+import Header from "../components/Header";
 
 function Letter() {    
   return (
     <div>
-      <div className={styles.mainText}>
-        🎂 Happy 2nd Anniversary 🎉
-      </div>
-      <Bar/>
+      <Header/>
     </div>
   );
 }

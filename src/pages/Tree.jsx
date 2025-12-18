@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Pages.module.css";
-import Bar from "../components/Bar";
+import Header from "../components/Header";
 import treeImg from "../assets/tree.png";
 
 const DECORATIONS = ["🎄", "💻", "🪩", "⭐", "✨", "🔔", "🎁"];
@@ -41,8 +41,7 @@ function Tree() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.mainText}>🎂 Happy 2nd Anniversary 🎄</div>
-      <Bar/>
+      <Header/>
       <div className={styles.treeContainer}>
         <div style={{ fontSize: '40px', fontWeight: '700' }}>Developer's Christmas Tree</div>
         <div style={{ fontSize: '20px', fontWeight: '400' }}>원하는 장식을 선택하고 트리의 빈 칸을 클릭해 장식을 배치해보세요!</div>

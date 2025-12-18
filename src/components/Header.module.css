@@ -1,3 +1,16 @@
+.header {
+  background: aliceblue;
+  padding-bottom: 30px;
+  border-bottom: 0.5px solid #cccccc;
+}
+
+.mainText {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 40px;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -8,8 +21,8 @@
   padding: 0;
   box-sizing: border-box;
 
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 23px;
+  font-weight: 500;
 }
 
 .title {
@@ -26,5 +39,5 @@
 }
 
 .active {
-  background-color: rgba(47, 123, 255, 0.3);
+  background-color: rgba(80, 147, 219, 0.2);
 }

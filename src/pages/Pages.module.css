@@ -28,6 +28,25 @@
   object-fit: cover;
 }
 
+.floatingBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 20px;
+  background-color: aliceblue;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+.floatingBtn:hover {
+  background-color: #f0f8ff80;
+}
+
 /* photo */
 .photoContainer {
   padding-top: 50px;

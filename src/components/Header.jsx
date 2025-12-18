@@ -9,7 +9,7 @@ function Header() {
 
   return (
     <div className={styles.header}>
-      <div className={styles.mainText}>🎂 Happy 2nd Anniversary 🎂</div>
+      <div className={styles.mainText}>🎂 Happy 2nd Anniversary 🎄</div>
       <div className={styles.container}>
         <div 
           className={`${styles.title} ${isActive("/") ? styles.active : ""}`}

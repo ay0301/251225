@@ -1,13 +1,42 @@
-import styles from "./Pages.module.css";
+import { useCallback, useRef, useState } from "react";
 import Bar from "../components/Bar";
+import Webcam from "react-webcam";
+import styles from "./Pages.module.css";
+import cameraIcon from "../assets/camera.png";
 
-function Photo() {    
+function Photo() {  
+  const webcamRef = useRef(null);
+  const [imgSrc, setImgSrc] = useState(null);
+
+  const capture = useCallback(() => {
+    if (webcamRef) {
+      const imageSrc = webcamRef.current?.getScreenshot();
+      setImgSrc(imageSrc);
+    }
+  }, [webcamRef, setImgSrc]);
+
   return (
-    <div>
-      <div className={styles.mainText}>
-        🎂 Happy 2nd Anniversary 🎉
+    <div className={styles.wrapper}>
+      <div className={styles.mainText}>🎂 Happy 2nd Anniversary 🎉</div>
+      <Bar />
+      <div className={styles.photoContainer}>
+        <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" mirrored={true} />
+        <button
+          className={styles.webcamButton}
+          onClick={capture}
+        >
+          <img src={cameraIcon} alt="camera-icon" />
+        </button>
       </div>
-      <Bar/>
+
+      {imgSrc && (
+        <div className={styles.capturedContainer}>
+          <img src={imgSrc} />
+          <span className={styles.capturedText}>
+            2025. 12. 25. 2주년 기념 🥰
+          </span>
+        </div>
+      )}
     </div>
   );
 }

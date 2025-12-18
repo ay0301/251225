@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Letter from './pages/Letter';
 import Photo from './pages/Photo';
-import Song from './pages/Song';
+import Tree from './pages/Tree';
 import './App.css'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/letter" element={<Letter />} />
         <Route path="/photo" element={<Photo />} />
-        <Route path="/song" element={<Song />} />
+        <Route path="/tree" element={<Tree />} />
       </Routes>
     </BrowserRouter>
   )

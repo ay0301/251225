@@ -79,3 +79,69 @@
   font-weight: bold;
   padding-top: 1rem;
 }
+
+/* tree */
+.treeContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.decoration {
+  font-size: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.selected {
+  border: 2px solid green;
+}
+
+.treeWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.treeStage {
+  position: relative;
+  width: 600px;
+  height: 500px;
+}
+
+.treeImage {
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+}
+
+.lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.lines line {
+  stroke: rgba(0, 0, 0, 0.4);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.node {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  cursor: pointer;
+}

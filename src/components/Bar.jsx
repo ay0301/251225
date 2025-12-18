@@ -28,10 +28,10 @@ function Bar() {
         PHOTO
       </div>
       <div
-        className={`${styles.title} ${isActive("/song") ? styles.active : ""}`}
-        onClick={() => navigate("/song")}
+        className={`${styles.title} ${isActive("/tree") ? styles.active : ""}`}
+        onClick={() => navigate("/tree")}
       >
-        SONG
+        TREE
       </div>
     </div>
   );

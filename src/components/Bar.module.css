@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.title:hover {
+  background-color: rgba(47, 123, 255, 0.2);
+}
+
+.active {
+  background-color: rgba(47, 123, 255, 0.4);
+}

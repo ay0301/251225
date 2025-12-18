@@ -1,7 +1,7 @@
 import styles from "./Pages.module.css";
 import Bar from "../components/Bar";
 
-function Home() {    
+function Song() {    
   return (
     <div>
       <div className={styles.mainText}>
@@ -12,4 +12,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Song;

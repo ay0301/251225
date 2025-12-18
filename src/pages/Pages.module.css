@@ -138,3 +138,32 @@
   font-size: 35px;
   cursor: pointer;
 }
+
+.completed {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 5px #ffe066);
+  }
+  to {
+    filter: drop-shadow(0 0 20px #ffd700);
+  }
+}
+
+.completed .node {
+  animation: pop 0.4s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

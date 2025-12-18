@@ -25,9 +25,13 @@ const TREE = {
   },
 };
 
+const TOTAL_NODES = 7;
+
 function Tree() {    
   const [selected, setSelected] = useState(null);
   const [placed, setPlaced] = useState({});
+
+  const isCompleted = Object.keys(placed).length === TOTAL_NODES;
 
   const handlePlace = (nodeId) => {
     if (!selected) return;
@@ -48,7 +52,7 @@ function Tree() {
       
         {/* 트리 이미지 */}
         <div className={styles.treeWrapper}>
-          <div className={styles.treeStage}>
+          <div className={`${styles.treeStage} ${isCompleted ? styles.completed : ""}`}>
             <img src={treeImg} className={styles.treeImage} alt="tree" />
 
             <svg className={styles.lines}

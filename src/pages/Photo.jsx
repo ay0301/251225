@@ -7,11 +7,17 @@ import cameraIcon from "../assets/camera.png";
 function Photo() {  
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
+  const [flash, setFlash] = useState(false);
 
   const capture = useCallback(() => {
     if (webcamRef) {
-      const imageSrc = webcamRef.current?.getScreenshot();
-      setImgSrc(imageSrc);
+      setFlash(true);
+
+      setTimeout(() => {
+        const imageSrc = webcamRef.current.getScreenshot();
+        setImgSrc(imageSrc);
+        setFlash(false);
+      }, 100);
     }
   }, [webcamRef, setImgSrc]);
 
@@ -36,6 +42,7 @@ function Photo() {
           </span>
         </div>
       )}
+      {flash && <div className={styles.flash} />}
     </div>
   );
 }

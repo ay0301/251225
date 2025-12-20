@@ -47,8 +47,7 @@ function Tree() {
     <div className={styles.wrapper}>
       <Header/>
       <div className={styles.treeContainer}>
-        <div style={{ fontSize: '40px', fontWeight: '700' }}>Developer's Christmas Tree</div>
-        <div style={{ fontSize: '20px', fontWeight: '400' }}>원하는 장식을 선택하고 트리의 빈 칸을 클릭해서 장식을 배치해봐 ^_^!</div>
+        <div style={{ fontSize: '40px', fontWeight: '700' }}>Developer's Christmas Tree ^_^</div>
       
         {/* 트리 이미지 */}
         <div className={styles.treeWrapper}>

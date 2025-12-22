@@ -5,12 +5,12 @@ import Confetti from "../components/Confetti";
 import image0 from "../assets/image0.jpg";
 import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
-import image3 from "../assets/image1.jpg";
-import image4 from "../assets/image1.jpg";
-import image5 from "../assets/image1.jpg";
+import image3 from "../assets/image3.jpg";
+import image4 from "../assets/image4.jpg";
 
 function Home() {    
   const [confettiOn, setConfettiOn] = useState(true);
+  const photo = localStorage.getItem("capturedPhoto");
 
   return (
     <div className={styles.wrapper}>
@@ -36,14 +36,14 @@ function Home() {
       </div>
       <div className={styles.rowContainer}>
         <img className={styles.homeImage} src={image3} alt="main-image" />
-        <div className={styles.text}>2023.12.20. 첫 해외여행!</div>
+        <div className={styles.text}>2024.07.02. 첫 해외여행!</div>
       </div>
       <div className={styles.rowContainer}>
         <img className={styles.homeImage} src={image4} alt="main-image" />
-        <div className={styles.text}>2023.12.20. 첫 1주년!!</div>
+        <div className={styles.text}>2024.12.25. 첫 1주년!!</div>
       </div>
       <div className={styles.rowContainer}>
-        <img className={styles.homeImage} src={image5} alt="main-image" />
+        {photo && <img className={styles.homeImage} src={photo} alt="main-image" />}
         <div className={styles.text}>2025.12.25. 그리고 오늘</div>
       </div>
 

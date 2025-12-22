@@ -10,16 +10,19 @@ function Photo() {
   const [flash, setFlash] = useState(false);
 
   const capture = useCallback(() => {
-    if (webcamRef) {
-      setFlash(true);
+    if (!webcamRef.current) return;
 
-      setTimeout(() => {
-        const imageSrc = webcamRef.current.getScreenshot();
+    setFlash(true);
+
+    setTimeout(() => {
+      const imageSrc = webcamRef.current.getScreenshot();
+      if (imageSrc) {
         setImgSrc(imageSrc);
-        setFlash(false);
-      }, 100);
-    }
-  }, [webcamRef, setImgSrc]);
+        localStorage.setItem("capturedPhoto", imageSrc);
+      }
+      setFlash(false);
+    }, 100);
+  }, []);
 
   return (
     <div className={styles.wrapper}>
